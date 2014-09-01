@@ -20,7 +20,7 @@
         <location filename="../src/kaddressbook2cvs.cpp" line="32"/>
         <location filename="../src/kaddressbook2ics.cpp" line="32"/>
         <source>Version: </source>
-        <translation type="unfinished"></translation>
+        <translation>Versión: </translation>
     </message>
     <message>
         <location filename="../src/kaddressbook2cvs.cpp" line="33"/>

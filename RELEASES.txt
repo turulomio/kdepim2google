@@ -1,2 +1,2 @@
-kdepim2google-0.1 <==>  svn -r 1 co https://xulpymoney.svn.sourceforge.net/svnroot/xulpymoney/xulpymoney xulpymoney 
+kdepim2google-0.1 <==>  svn -r 2 co  svn://svn.code.sf.net/p/kdepim2google/code/ kdepim2google
 
