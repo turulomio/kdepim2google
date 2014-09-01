@@ -94,13 +94,7 @@ void SetContacts::print(){
   foreach(Contact *c, this->list){
     QTextStream(stdout)<< c->print() <<"\n";
   }
-  QTextStream(stdout) << QString(tr("Loaded %1 contacts\n")).arg(this->list.count());
-/*
-    Contact *a=this->list.at(0);
-    Contact *b=this->list.at(1) ; 
-    bool bo= a->name<b->name;
-    bool bu= a<b;
-    QTextStream(stdout) <<bu << a->name <<b->name<< bo << "\n"; */ 
+  QTextStream(stdout) << QString(tr("Loaded %1 contacts\n")).arg(this->list.count()) << "\n";
 }
 
 

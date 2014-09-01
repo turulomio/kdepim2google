@@ -1,4 +1,9 @@
-kdepim2google 0.1
-=================
+kdepim2google 0.1.1
+===================
+- Added shared libraries
+- Added uninstall bash script
+
+kdepim2google 0.1.0
+===================
 - Extracts birthdays from kaddressbook to ics and vcs files to import in Google Calendar
 
