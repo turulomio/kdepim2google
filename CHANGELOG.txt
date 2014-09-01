@@ -1,0 +1,4 @@
+kdepim2google 0.1
+=================
+- Extracts birthdays from kaddressbook to ics and vcs files to import in Google Calendar
+

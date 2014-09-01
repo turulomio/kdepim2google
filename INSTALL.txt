@@ -1,0 +1,20 @@
+DEPENDENCIES
+------------
+You need QtCore from qt libraries
+
+
+INSTALLATION
+------------
+- Uncompress the source and change to the first directory with CMakeList.txt
+
+- Create a build directory 
+  # mkdir build
+
+- Change to the build directory
+  # cd build
+
+- Ejectute cmake
+  # cmake ..
+
+- Compile and install
+  # make; make install
