@@ -70,14 +70,14 @@
 <context>
     <name>SetContacts</name>
     <message>
-        <location filename="../src/SetContacts.cpp" line="34"/>
+        <location filename="../src/SetContacts.cpp" line="37"/>
         <source>Birthday of %1,%2-%3-%4,%2-%3-%4,True,Age of %5
 </source>
         <translation>Cumpleaños de %1,%2-%3-%4,%2-%3-%4,True,%5 años de edad
 </translation>
     </message>
     <message>
-        <location filename="../src/SetContacts.cpp" line="97"/>
+        <location filename="../src/SetContacts.cpp" line="103"/>
         <source>Loaded %1 contacts
 </source>
         <translation>Cargados %1 contactos</translation>

@@ -29,6 +29,9 @@ void SetContacts::CreateCVS(){
   QTextStream out(&file);
   out << "Subject,Start Date,End Date,All Day Event,Description\n";
   foreach(Contact *c, this->list){
+    if (c->showBirthday==false){
+      continue;
+    }
     for (int year=QDate::currentDate().year();year<=QDate::currentDate().year()+3;year++){
       if (QDate(year,c->birthday.month(),c->birthday.day())>=QDate::currentDate()) {
 	out << QString(tr("Birthday of %1,%2-%3-%4,%2-%3-%4,True,Age of %5\n")).arg(c->name).arg(year).arg(c->birthday.month()).arg(c->birthday.day()).arg(c->age_in_birthday(year));
@@ -53,6 +56,9 @@ void SetContacts::CreateICS(){
   out << "METHOD:PUBLISH\n";
 
   foreach(Contact *c, this->list){
+    if (c->showBirthday==false){
+      continue;
+    }
     //out << QString(tr("Birthday of %1,%2-%3-%4,%2-%3-%4,True,Age of %5\n")).arg(c->name).arg(year).arg(c->birthday.month()).arg(c->birthday.day()).arg(c->age_in_birthday(year));
     QString date=c->birthday.toString("yyyyMMdd");
     out << "BEGIN:VEVENT\n";
