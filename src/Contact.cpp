@@ -2,6 +2,7 @@
 
 Contact::Contact()
 {
+  this->showBirthday=true;
 }
 
 Contact::~Contact()
@@ -16,7 +17,13 @@ bool Contact::operator<(const Contact &a) {
 
 QString Contact::print()
 {
-  return QString("+ ")+ QString(tr("%1 was borned in %2")).arg(this->name).arg(this->birthday.toString("yyyy-MM-dd"));
+  QString showed;
+  if (this->showBirthday==true){
+    showed=QString("");
+  } else{
+    showed=QString("(%1)").arg(tr("Not showed"));
+  }
+  return QString("+ ")+ QString(tr("%1 was borned in %2 %3")).arg(this->name).arg(this->birthday.toString("yyyy-MM-dd")).arg(showed);
 }
 
 bool Contact::isValid()
@@ -36,6 +43,7 @@ bool Contact::ParseFile(QString filepath){
     QTextStream in(&file);
     QString line = in.readLine();
     while (!line.isNull()) {     
+	 //Gets name
          if (line.startsWith("FN:", Qt::CaseSensitive)){
 	   this->name=line.replace("FN:","");
 	 }
@@ -44,13 +52,20 @@ bool Contact::ParseFile(QString filepath){
 	     this->name=line.replace("NAME:","");
 	   }
 	 }
-         if (line.startsWith("BDAY:", Qt::CaseInsensitive)){
+	 
+	 //Gets birthday
+         if (line.startsWith("BDAY:", Qt::CaseSensitive)){
 	   if (QDate::fromString(line.replace("BDAY:","").left(10),"yyyy-MM-dd").isValid()){
 	     this->birthday=QDate::fromString(line.replace("BDAY:","").left(10),"yyyy-MM-dd");
 	   }
 	 }
-	
-      line = in.readLine();
+	 
+	 //Gets showBirthday
+	 if (line.contains(tr("Hide birthday"),Qt::CaseInsensitive)==true){
+	   this->showBirthday=false;
+	 } 
+	 
+	 line = in.readLine();
     }
     return this->isValid();
 }

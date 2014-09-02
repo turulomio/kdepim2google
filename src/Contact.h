@@ -1,4 +1,3 @@
-
 #ifndef CONTACT_H
 #define CONTACT_H
 
@@ -16,12 +15,16 @@ public:
     ~Contact();
     QString name;
     QDate birthday;
+    
+    /**
+     * Boolean who especifies if the Contact must show the birthday or not
+     */
+    bool showBirthday;
+    
     QString print();
     bool isValid();
     bool ParseFile(QString path);
     int age_in_birthday(int year);
     bool operator<(const Contact &a);
-
-
 };
 #endif // CONTACT_H

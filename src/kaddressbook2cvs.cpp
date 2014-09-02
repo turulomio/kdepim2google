@@ -15,15 +15,20 @@ int main(int argc, char** argv) {
     app.installTranslator(&qtTranslator);
 
     QTranslator translator;
-    if ( translator.load("/usr/share/kdepim2google/kdepim2google_"+QLocale::system().name().left(2)+".qm")){
-      QTextStream(stdout) << "Loaded /usr\n";
-    } else{
-      if (translator.load("/usr/local/share/kdepim2google/kdepim2google_"+QLocale::system().name().left(2)+".qm")){
-	QTextStream(stdout) << "Loaded /usr/local\n";
-      } else {
-	QTextStream(stdout) << "Not loaded\n" ;
+    if ( translator.load("kdepim2google_"+QLocale::system().name().left(2)+".qm")){
+        QTextStream(stdout) << "Loaded ./\n";
+    }else{
+      if ( translator.load("/usr/local/share/kdepim2google/kdepim2google_"+QLocale::system().name().left(2)+".qm")){
+        QTextStream(stdout) << "Loaded /usr/local\n";
+      } else{
+        if (translator.load("/usr/share/kdepim2google/kdepim2google_"+QLocale::system().name().left(2)+".qm")){
+	  QTextStream(stdout) << "Loaded /usr/\n";
+        } else {
+	  QTextStream(stdout) << "Not loaded\n" ;
+        }
       }
-    }    app.installTranslator(&translator);
+    }
+    app.installTranslator(&translator);
 
     QStringList arguments = app.arguments();
 
