@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION=`cat src/CMakeLists.txt | grep '(VERSION '| cut --delimiter=' '  -f 3| cut --delimiter=')' -f 1`
+VERSION=`cat src/CMakeLists.txt | grep '(VERSION '| cut --delimiter='"'  -f 2`
 CWD=`pwd`
 cd ..
 a=kdepim2google
