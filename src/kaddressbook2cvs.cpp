@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
 
     if (arguments.size()==1) {
          QTextStream(stdout) << QObject::tr("Usage: kaddressbook2cvs contacts_dir") << "\n" 
-                    << "   " << QObject::tr("Version: ") << VERSION << "\n"
+                    << "   " << QObject::tr("Version: ") << QString(VERSION) << "\n"
                     << "   " << QObject::tr("Create a cvs file to import in google calendar from kaddressbook birthdays") <<"\n"
                     << "   " << QObject::tr("You must create/replace a new calendar call kaddressbook, then you have to import cvs file INTO IT") <<"\n"
                     << "   " << QObject::tr("The program creates birthdays from today to 3 years.") <<"\n"

@@ -1,7 +1,7 @@
 set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR})
-set (VERSION 0.1.1)
+set (VERSION "0.1.1")
 add_definitions(-DMYINSTALL_PREFIX=${CMAKE_INSTALL_PREFIX})
-add_definitions(-DVERSION="$VERSION")
+add_definitions(-DVERSION="${VERSION}")
 
 # Qt4 package
 find_package(Qt4 REQUIRED)
@@ -39,13 +39,11 @@ SET_PROPERTY(TARGET kdepim2google PROPERTY SOVERSION ${VERSION})
 # Create executable
 add_executable(kaddressbook2cvs ${HEADERS_KADDRESSBOOK2CVS_MOC} ${SOURCES_KADDRESSBOOK2CVS} ${QM_FILES})
 target_link_libraries(kaddressbook2cvs ${LIBRARIES} kdepim2google)
-set_target_properties(kaddressbook2cvs PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
 set_target_properties(kaddressbook2cvs PROPERTIES OUTPUT_NAME kaddressbook2cvs${BUILD_POSTFIX})
 
 # Create executable
 add_executable(kaddressbook2ics ${HEADERS_KADDRESSBOOK2ICS_MOC} ${SOURCES_KADDRESSBOOK2ICS} ${QM_FILES})
 target_link_libraries(kaddressbook2ics ${LIBRARIES} kdepim2google)
-set_target_properties(kaddressbook2ics PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
 set_target_properties(kaddressbook2ics PROPERTIES OUTPUT_NAME kaddressbook2ics${BUILD_POSTFIX})
 
 # Create installation
