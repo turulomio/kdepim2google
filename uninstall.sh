@@ -1,6 +1,6 @@
 #!/bin/bash
-DESTDIR=/usr/local
-echo $DESTDIR
+DESTDIR=${1-/usr/local}
+echo "Uninstalling from $DESTDIR"
 rm $DESTDIR/bin/kaddressbook2cvs $DESTDIR/bin/kaddressbook2ics
 rm -Rf $DESTDIR/include/kdepim2google/
 rm $DESTDIR/lib/libkdepim2google*
