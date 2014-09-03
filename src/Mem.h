@@ -6,6 +6,10 @@
 #include <QTranslator>
 #include <QLibraryInfo>
 #include <QTextStream>
+#include <QDir>
+
+
+enum class Apps{ Kaddressbook2CVS, Kaddressbook2ICS};
 
 class Mem : public QObject
 {
@@ -14,6 +18,8 @@ class Mem : public QObject
 public:
     Mem();
     ~Mem();
+    void showHelp(enum Apps app);
+    QString defaultContactDir();
 
 private:
   QTranslator *translator;

@@ -1,6 +1,5 @@
 #include <QCoreApplication>
 #include <QTimer>
-#include <QTextStream>
 #include <QStringList>
 
 #include "Mem.h"
@@ -11,19 +10,17 @@ int main(int argc, char** argv) {
     
     Mem *mem=new Mem();
 
-
+    QString path;//path to look for
     QStringList arguments = app.arguments();
-
+ QTextStream(stdout) << mem->defaultContactDir();
     if (arguments.size()==1) {
-         QTextStream(stdout) << QObject::tr("Usage: kaddressbook2ics contacts_dir") << "\n" 
-                    << "   " << QObject::tr("Version: ") << QString (VERSION) << "\n"
-                    << "   " << QObject::tr("Create a ics file to import in google calendar from kaddressbook birthdays") <<"\n"
-                    << "   " << QObject::tr("You must create/replace a new calendar called kaddressbook, then you have to import ics file INTO IT") <<"\n"
-                    ;
-         return 0;
-     }
+      mem->showHelp(Apps::Kaddressbook2ICS);
+      return 0;
+    } else {
+      path=arguments.at(1);
+    }
 
-    WorkerICS worker(arguments.at(1));
+    WorkerICS worker(path);
     QObject::connect(&worker, SIGNAL(done()), &app, SLOT(quit()));
     QTimer::singleShot(0, &worker, SLOT(run()));
     int ret=app.exec();

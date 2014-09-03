@@ -1,22 +1,3 @@
-/*
- * <one line to give the library's name and an idea of what it does.>
- * Copyright (C) 2014  Mariano Muñoz <mmmarquinez@gmail.com>
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- */
-
 #include "Mem.h"
 
 Mem::Mem()
@@ -53,4 +34,32 @@ void Mem::loadQTranslator()
       }
     }
     qApp->installTranslator(this->translator);
+}
+
+void Mem::showHelp(enum Apps app)
+{
+  QString s;
+  QString version=tr("Version: %1").arg(QString(VERSION));
+  switch(app){
+    case Apps::Kaddressbook2CVS:
+      s= tr("Usage: kaddressbook2cvs contacts_dir") + "\n" +
+         "   " + version + "\n" +
+	 "   " + tr("Create a cvs file to import in google calendar from kaddressbook birthdays") + "\n" +
+	 "   " + tr("You must create/replace a new calendar called kaddressbook, then you have to import cvs file INTO IT") + "\n" +
+	 "   " + tr("The program creates birthdays from today to 3 years.") + "\n";
+      break;
+    case Apps::Kaddressbook2ICS:
+      s= tr("Usage: kaddressbook2ics contacts_dir") + "\n" +
+         "   " + version + "\n" +
+	 "   " + tr("Create a ics file to import in google calendar from kaddressbook birthdays") + "\n" +
+	 "   " + tr("You must create/replace a new calendar called kaddressbook, then you have to import ics file INTO IT") + "\n";
+      break;
+  }
+  QTextStream(stdout)  << s;
+}
+
+QString Mem::defaultContactDir(){
+  QString home = QFile::decodeName(qgetenv("HOME"));
+  if (home.isNull()) home = "/";
+  return home+"/.local/share/contacts";
 }

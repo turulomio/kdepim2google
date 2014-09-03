@@ -21,7 +21,7 @@ QString Contact::print()
   if (this->showBirthday==true){
     showed=QString("");
   } else{
-    showed=QString("(%1)").arg(tr("Not showed"));
+    showed=QString("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< (%1)").arg(tr("Not showed"));
   }
   return QString("+ ")+ QString(tr("%1 was borned in %2 %3")).arg(this->name).arg(this->birthday.toString("yyyy-MM-dd")).arg(showed);
 }
