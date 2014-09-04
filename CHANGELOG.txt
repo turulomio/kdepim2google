@@ -1,3 +1,9 @@
+kdepim2google 0.2.0
+===================
+- Added default directory
+- Hide birthdays when a string 'Hide birthday' is set in the contact
+
+
 kdepim2google 0.1.1
 ===================
 - Added shared libraries
