@@ -21,15 +21,15 @@ void Mem::loadQTranslator()
 
     //Load APP
     if ( this->translator->load("kdepim2google_"+QLocale::system().name().left(2)+".qm")){
-        QTextStream(stdout) << "Loaded ./\n";
+//         QTextStream(stdout) << "Loaded ./\n";
     }else{
       if ( this->translator->load("/usr/local/share/kdepim2google/kdepim2google_"+QLocale::system().name().left(2)+".qm")){
-        QTextStream(stdout) << "Loaded /usr/local\n";
+//         QTextStream(stdout) << "Loaded /usr/local\n";
       } else{
         if (this->translator->load("/usr/share/kdepim2google/kdepim2google_"+QLocale::system().name().left(2)+".qm")){
-	  QTextStream(stdout) << "Loaded /usr/\n";
+// 	  QTextStream(stdout) << "Loaded /usr/\n";
         } else {
-	  QTextStream(stdout) << "Not loaded\n" ;
+// 	  QTextStream(stdout) << "Not loaded\n" ;
         }
       }
     }

@@ -20,6 +20,7 @@ public:
     void CreateICS();
     void print();
     void sort();//Sort by name
+    int countShowBirhday();
 
 };
 

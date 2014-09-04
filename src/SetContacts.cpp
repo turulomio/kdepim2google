@@ -100,7 +100,20 @@ void SetContacts::print(){
   foreach(Contact *c, this->list){
     QTextStream(stdout)<< c->print() <<"\n";
   }
-  QTextStream(stdout) << QString(tr("Loaded %1 contacts\n")).arg(this->list.count()) << "\n";
 }
 
+/**
+ * Sum contacts that can show birthday
+ */
+int SetContacts::countShowBirhday()
+{
+  int i=0;
+  foreach(Contact *c, this->list){
+    if (c->showBirthday==true){
+      i++;
+    }
+  }
+  return i;
+
+}
 

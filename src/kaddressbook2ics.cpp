@@ -2,6 +2,7 @@
 #include <QTimer>
 #include <QStringList>
 
+
 #include "Mem.h"
 #include "kaddressbook2icsWorker.h"
 
@@ -12,10 +13,10 @@ int main(int argc, char** argv) {
 
     QString path;//path to look for
     QStringList arguments = app.arguments();
- QTextStream(stdout) << mem->defaultContactDir();
     if (arguments.size()==1) {
       mem->showHelp(Apps::Kaddressbook2ICS);
-      return 0;
+      path=mem->defaultContactDir();
+      QTextStream(stdout) << QObject::tr("Path not especified. Using default: %1").arg(path) <<"\n";
     } else {
       path=arguments.at(1);
     }
