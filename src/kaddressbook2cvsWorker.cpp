@@ -12,7 +12,7 @@ void WorkerCVS::run() {
     set.LoadFromPath(this->path);
     set.CreateCVS();
     set.print();
-    QTextStream(stdout) << QString(tr("%1 contacts in generated file\n")).arg(set.list.count()) << "\n";
+    QTextStream(stdout) << QString(tr("%1 from %2 contacts added to generated file")).arg(set.countShowBirthday()).arg(set.list.size()) << "\n";
     emit done();
     
 }

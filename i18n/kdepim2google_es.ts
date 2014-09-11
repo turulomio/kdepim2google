@@ -112,7 +112,7 @@
         <location filename="../src/kaddressbook2cvs.cpp" line="18"/>
         <location filename="../src/kaddressbook2ics.cpp" line="19"/>
         <source>Path not especified. Using default: %1</source>
-        <translation>Directorio con especificado. Usando directorio por defecto: %1</translation>
+        <translation>Directorio no especificado. Usando directorio por defecto: %1</translation>
     </message>
 </context>
 <context>
@@ -133,21 +133,29 @@
 <context>
     <name>WorkerCVS</name>
     <message>
-        <location filename="../src/kaddressbook2cvsWorker.cpp" line="15"/>
         <source>%1 contacts in generated file
 </source>
-        <translation>%1 contactos en el fichero generado
+        <translation type="obsolete">%1 contactos en el fichero generado
 </translation>
+    </message>
+    <message>
+        <location filename="../src/kaddressbook2cvsWorker.cpp" line="15"/>
+        <source>%1 from %2 contacts added to generated file</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>WorkerICS</name>
     <message>
-        <location filename="../src/kaddressbook2icsWorker.cpp" line="15"/>
         <source>%1 contacts in generated file
 </source>
-        <translation>%1 contactos en el fichero generado
+        <translation type="obsolete">%1 contactos en el fichero generado
 </translation>
+    </message>
+    <message>
+        <location filename="../src/kaddressbook2icsWorker.cpp" line="15"/>
+        <source>%1 from %2 contacts added to generated file</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

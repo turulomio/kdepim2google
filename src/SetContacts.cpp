@@ -105,7 +105,7 @@ void SetContacts::print(){
 /**
  * Sum contacts that can show birthday
  */
-int SetContacts::countShowBirhday()
+int SetContacts::countShowBirthday()
 {
   int i=0;
   foreach(Contact *c, this->list){
