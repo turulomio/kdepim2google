@@ -18,7 +18,7 @@
         <translation>%1 nació el día %2 %3</translation>
     </message>
     <message>
-        <location filename="../src/Contact.cpp" line="64"/>
+        <location filename="../src/Contact.cpp" line="66"/>
         <source>Hide birthday</source>
         <translation>Ocultar cumpleaños</translation>
     </message>
@@ -31,39 +31,56 @@
         <translation>Versión: %1</translation>
     </message>
     <message>
-        <location filename="../src/Mem.cpp" line="45"/>
+        <location filename="../src/Mem.cpp" line="43"/>
+        <source>You can add the string &apos;Hide birthday&apos; to the contact in order to exclude the birthday from the generated file</source>
+        <translation>Puedes añadir el texto &apos;Ocultar cumpleaños&apos; al contacto para excluir el cumpleaños del fichero generado</translation>
+    </message>
+    <message>
+        <location filename="../src/Mem.cpp" line="46"/>
         <source>Usage: kaddressbook2cvs contacts_dir</source>
         <translation>Uso: kaddressbook2cvs dir_contactos</translation>
     </message>
     <message>
-        <location filename="../src/Mem.cpp" line="47"/>
-        <source>Create a cvs file to import in google calendar from kaddressbook birthdays</source>
-        <translation>Crea un fichero cvs para importarlo en google calendar desde las fechas de cumpleaños de kaddressbook</translation>
-    </message>
-    <message>
         <location filename="../src/Mem.cpp" line="48"/>
-        <source>You must create/replace a new calendar called kaddressbook, then you have to import cvs file INTO IT</source>
-        <translation>Deber crear/reemplazar un calendario nuevo llamado kaddressbook e importar el fichero cvs DENTRO DE ÉL</translation>
+        <source>Create a cvs file to import in google calendar from kaddressbook birthdays</source>
+        <translation>Crea un fichero cvs para importarlo en google calendar con las fechas de cumpleaños de kaddressbook</translation>
     </message>
     <message>
         <location filename="../src/Mem.cpp" line="49"/>
+        <source>You must create/replace a new google calendar, then you have to import cvs file INTO IT</source>
+        <translation>Debes crear/reemplazar un calendario de google nuevo e importar el fichero cvs DENTRO DE ÉL</translation>
+    </message>
+    <message>
+        <location filename="../src/Mem.cpp" line="57"/>
+        <source>You must create/replace a new google calendar, then you have to import ics file INTO IT</source>
+        <translation>Debes crear/reemplazar un calendario de google nuevo e importar el fichero ics DENTRO DE ÉL</translation>
+    </message>
+    <message>
+        <source>You must create/replace a new calendar, then you have to import cvs file INTO IT</source>
+        <translation type="obsolete">Debes crear/reemplazar un calendario nuevo e importar el fichero cvs DENTRO DE ÉL</translation>
+    </message>
+    <message>
+        <source>You must create/replace a new calendar called kaddressbook, then you have to import cvs file INTO IT</source>
+        <translation type="obsolete">Debes crear/reemplazar un calendario nuevo llamado kaddressbook e importar el fichero cvs DENTRO DE ÉL</translation>
+    </message>
+    <message>
+        <location filename="../src/Mem.cpp" line="50"/>
         <source>The program creates birthdays from today to 3 years.</source>
         <translation>El programa crea cumpleaños desde hoy hasta 3 años.</translation>
     </message>
     <message>
-        <location filename="../src/Mem.cpp" line="52"/>
+        <location filename="../src/Mem.cpp" line="54"/>
         <source>Usage: kaddressbook2ics contacts_dir</source>
         <translation>Uso: kaddressbook2ics dir_contactos</translation>
     </message>
     <message>
-        <location filename="../src/Mem.cpp" line="54"/>
+        <location filename="../src/Mem.cpp" line="56"/>
         <source>Create a ics file to import in google calendar from kaddressbook birthdays</source>
-        <translation>Crea un fichero ics para importarlo en google calendar desde las fechas de cumpleaños de kaddressbook</translation>
+        <translation>Crea un fichero ics para importarlo en google calendar con las fechas de cumpleaños de kaddressbook</translation>
     </message>
     <message>
-        <location filename="../src/Mem.cpp" line="55"/>
         <source>You must create/replace a new calendar called kaddressbook, then you have to import ics file INTO IT</source>
-        <translation>Deber crear/reemplazar un calendario nuevo llamado kaddressbook e importar el fichero ics DENTRO DE ÉL</translation>
+        <translation type="obsolete">Debes crear/reemplazar un calendario nuevo llamado kaddressbook e importar el fichero ics DENTRO DE ÉL</translation>
     </message>
 </context>
 <context>
@@ -141,7 +158,7 @@
     <message>
         <location filename="../src/kaddressbook2cvsWorker.cpp" line="15"/>
         <source>%1 from %2 contacts added to generated file</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 de %2 contactos han sido añadidos al fichero generado</translation>
     </message>
 </context>
 <context>
@@ -155,7 +172,7 @@
     <message>
         <location filename="../src/kaddressbook2icsWorker.cpp" line="15"/>
         <source>%1 from %2 contacts added to generated file</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 de %2 contactos han sido añadidos al fichero generado</translation>
     </message>
 </context>
 </TS>

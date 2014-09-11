@@ -40,19 +40,22 @@ void Mem::showHelp(enum Apps app)
 {
   QString s;
   QString version=tr("Version: %1").arg(QString(VERSION));
+  QString hide=tr("You can add the string 'Hide birthday' to the contact in order to exclude the birthday from the generated file");
   switch(app){
     case Apps::Kaddressbook2CVS:
       s= tr("Usage: kaddressbook2cvs contacts_dir") + "\n" +
          "   " + version + "\n" +
 	 "   " + tr("Create a cvs file to import in google calendar from kaddressbook birthdays") + "\n" +
-	 "   " + tr("You must create/replace a new calendar called kaddressbook, then you have to import cvs file INTO IT") + "\n" +
-	 "   " + tr("The program creates birthdays from today to 3 years.") + "\n";
+	 "   " + tr("You must create/replace a new google calendar, then you have to import cvs file INTO IT") + "\n" +
+	 "   " + tr("The program creates birthdays from today to 3 years.") + "\n" +
+         "   " + hide + "\n" ;
       break;
     case Apps::Kaddressbook2ICS:
       s= tr("Usage: kaddressbook2ics contacts_dir") + "\n" +
          "   " + version + "\n" +
 	 "   " + tr("Create a ics file to import in google calendar from kaddressbook birthdays") + "\n" +
-	 "   " + tr("You must create/replace a new calendar called kaddressbook, then you have to import ics file INTO IT") + "\n";
+	 "   " + tr("You must create/replace a new google calendar, then you have to import ics file INTO IT") + "\n"+
+         "   " + hide + "\n" ;
       break;
   }
   QTextStream(stdout)  << s;

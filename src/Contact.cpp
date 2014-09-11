@@ -42,6 +42,7 @@ bool Contact::ParseFile(QString filepath){
 
     QTextStream in(&file);
     QString line = in.readLine();
+    QString all= line;
     while (!line.isNull()) {     
 	 //Gets name
          if (line.startsWith("FN:", Qt::CaseSensitive)){
@@ -52,20 +53,21 @@ bool Contact::ParseFile(QString filepath){
 	     this->name=line.replace("NAME:","");
 	   }
 	 }
-	 
 	 //Gets birthday
          if (line.startsWith("BDAY:", Qt::CaseSensitive)){
 	   if (QDate::fromString(line.replace("BDAY:","").left(10),"yyyy-MM-dd").isValid()){
 	     this->birthday=QDate::fromString(line.replace("BDAY:","").left(10),"yyyy-MM-dd");
 	   }
 	 }
-	 
-	 //Gets showBirthday
-	 if (line.contains(tr("Hide birthday"),Qt::CaseInsensitive)==true){
-	   this->showBirthday=false;
-	 } 
-	 
-	 line = in.readLine();
+	 line=in.readLine();
+	 all=all+line;
+    }
+    //Gets showBirthday. We must replace " " due to in ics file make end of line " "
+    QString search=tr("Hide birthday");
+    search=search.replace(" ","");
+    all=all.replace(" ","");
+    if (all.contains(search,Qt::CaseInsensitive)==true){
+        this->showBirthday=false;
     }
     return this->isValid();
 }
