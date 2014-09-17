@@ -34,8 +34,7 @@ void SetContacts::CreateCVS(){
     }
     for (int year=QDate::currentDate().year();year<=QDate::currentDate().year()+3;year++){
       if (QDate(year,c->birthday.month(),c->birthday.day())>=QDate::currentDate()) {
-	out << QString(tr("Birthday of %1,%2-%3-%4,%2-%3-%4,True,Age of %5\n")).arg(c->name).arg(year).arg(c->birthday.month()).arg(c->birthday.day()).arg(c->age_in_birthday(year));
-	
+	out << tr("Birthday of %1,%2-%3-%4,%2-%3-%4,True,Age of %5\n").arg(c->name).arg(year).arg(c->birthday.month()).arg(c->birthday.day()).arg(c->age_in_birthday(year));
       }
     }
   }
@@ -64,7 +63,7 @@ void SetContacts::CreateICS(){
     out << "BEGIN:VEVENT\n";
     out << "DTSTART;VALUE=DATE:"<< date <<"\n";
     out << "DTEND;VALUE=DATE:"<< date <<"\n";
-    out << "SUMMARY:Birthday of "<< c->name << "\n";
+    out << "SUMMARY:" << tr("Birthday of %1").arg(c->name) << "\n";
     out << "RRULE:FREQ=YEARLY;INTERVAL=1\n";
     out << "END:VEVENT\n";
   }

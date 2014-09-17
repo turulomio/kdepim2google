@@ -142,6 +142,11 @@
 </translation>
     </message>
     <message>
+        <location filename="../src/SetContacts.cpp" line="66"/>
+        <source>Birthday of %1</source>
+        <translation>Cumpleaños de %1</translation>
+    </message>
+    <message>
         <source>Loaded %1 contacts
 </source>
         <translation type="obsolete">Cargados %1 contactos</translation>
