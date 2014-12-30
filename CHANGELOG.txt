@@ -1,3 +1,7 @@
+kdepim2google 0.5.0
+===================
+- Contact name is searched in N: too
+
 kdepim2google 0.4.0
 ===================
 - Fixed bad spanish translations
@@ -12,7 +16,6 @@ kdepim2google 0.2.0
 ===================
 - Added default directory.
 - Hide birthdays when a string 'Hide birthday' is set in the contact.
-
 
 kdepim2google 0.1.1
 ===================

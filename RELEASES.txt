@@ -3,3 +3,5 @@ kdepim2google-0.1.1 <==>  svn -r 3 co  svn://svn.code.sf.net/p/kdepim2google/cod
 kdepim2google-0.2.0 <==>  svn -r 11 co  svn://svn.code.sf.net/p/kdepim2google/code/ kdepim2google
 kdepim2google-0.3.0 <==>  svn -r 15 co  svn://svn.code.sf.net/p/kdepim2google/code/ kdepim2google
 kdepim2google-0.4.0 <==>  svn -r 17 co  svn://svn.code.sf.net/p/kdepim2google/code/ kdepim2google
+kdepim2google-0.5.0 <==>  svn -r 18 co  svn://svn.code.sf.net/p/kdepim2google/code/ kdepim2google
+

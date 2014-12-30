@@ -49,6 +49,11 @@ bool Contact::ParseFile(QString filepath){
 	   this->name=line.replace("FN:","");
 	 }
 	 if (this->name.isNull()){
+	   if (line.startsWith("N:", Qt::CaseSensitive)){
+	     this->name=line.replace("N:","");
+	   }
+	 }
+	 if (this->name.isNull()){
 	   if (line.startsWith("NAME:", Qt::CaseSensitive)){
 	     this->name=line.replace("NAME:","");
 	   }

@@ -18,7 +18,7 @@
         <translation>%1 nació el día %2 %3</translation>
     </message>
     <message>
-        <location filename="../src/Contact.cpp" line="66"/>
+        <location filename="../src/Contact.cpp" line="71"/>
         <source>Hide birthday</source>
         <translation>Ocultar cumpleaños</translation>
     </message>
