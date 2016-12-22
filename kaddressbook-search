@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+import argparse
+import os
+import sys
+parser=argparse.ArgumentParser(prog=sys.argv[0], description='Search in kaddressbook filesst to find them')    
+parser.add_argument('-v', '--version', action='version', version="0.1.0")
+parser.add_argument('--dir', help='.local/share/contacts directory', default='/mnt/sshfs/ayla/home/keko/.local/share/contacts')
+parser.add_argument('-f', '--find', help='Find pattern', required=True)
+args=parser.parse_args()
+
+try:
+	os.chdir(args.dir)
+except:
+	print ("No he podido cambiar a {}".format(args.dir))
+
+
+os.system("grep --colour -C 100 -ir {} ./".format(args.find))
