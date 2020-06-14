@@ -1,7 +1,7 @@
 set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR})
 set (VERSION "0.6.0")
 set (LIBDIR "lib")
-add_definit1ions(-DMYINSTALL_PREFIX=${CMAKE_INSTALL_PREFIX})
+add_definitions(-DMYINSTALL_PREFIX=${CMAKE_INSTALL_PREFIX})
 add_definitions(-DVERSION="${VERSION}")
 
 # Qt5 package
