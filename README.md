@@ -7,19 +7,11 @@ You need QtCore from qt libraries
 
 ## Installation
 
-- Uncompress the source and change to the first directory with CMakeList.txt
-
-- Create a build directory 
-  # mkdir build
-
-- Change to the build directory
-  # cd build
-
-- Ejectute cmake
-  # cmake ..
-
-- Compile and install
-  # make; make install
+1) Uncompress the source and change to the first directory with CMakeList.txt
+1) Run `mkdir build`
+1) Run `cd build`
+1) Run `cmake ..`
+1) Run `make; make install`
 
 ## Changelog
 
