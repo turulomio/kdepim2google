@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>Contact</name>
     <message>
@@ -127,7 +127,6 @@
     </message>
     <message>
         <location filename="../src/kaddressbook2cvs.cpp" line="18"/>
-        <location filename="../src/kaddressbook2ics.cpp" line="19"/>
         <source>Path not especified. Using default: %1</source>
         <translation>Directorio no especificado. Usando directorio por defecto: %1</translation>
     </message>
@@ -178,6 +177,47 @@
         <location filename="../src/kaddressbook2icsWorker.cpp" line="15"/>
         <source>%1 from %2 contacts added to generated file</source>
         <translation>%1 de %2 contactos han sido añadidos al fichero generado</translation>
+    </message>
+</context>
+<context>
+    <name>main</name>
+    <message>
+        <source>Usage: kaddressbook2cvs contacts_dir</source>
+        <translation type="obsolete">Uso: kaddressbook2cvs dir_contactos</translation>
+    </message>
+    <message>
+        <source>You must create/replace a new google calendar, then you have to import cvs file INTO IT</source>
+        <translation type="obsolete">Debes crear/reemplazar un calendario de google nuevo e importar el fichero cvs DENTRO DE ÉL</translation>
+    </message>
+    <message>
+        <location filename="../src/kaddressbook2ics.cpp" line="17"/>
+        <source>Converts kaddressbook contact important dates to a &apos;ics&apos; calendar file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/kaddressbook2ics.cpp" line="18"/>
+        <source>Then, you must create/replace a new google calendar, where you&apos;ll import ics file into it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/kaddressbook2ics.cpp" line="19"/>
+        <source>The program creates birthdays from today to 3 years.</source>
+        <translation type="unfinished">El programa crea cumpleaños desde hoy hasta 3 años.</translation>
+    </message>
+    <message>
+        <location filename="../src/kaddressbook2ics.cpp" line="20"/>
+        <source>You can add the string &apos;Hide birthday&apos; to the contact in order to exclude the birthday from the generated file</source>
+        <translation type="unfinished">Puedes añadir el texto &apos;Ocultar cumpleaños&apos; al contacto para excluir el cumpleaños del fichero generado</translation>
+    </message>
+    <message>
+        <location filename="../src/kaddressbook2ics.cpp" line="25"/>
+        <source>Contacts directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/kaddressbook2ics.cpp" line="35"/>
+        <source>Path not especified. Using default: %1</source>
+        <translation type="unfinished">Directorio no especificado. Usando directorio por defecto: %1</translation>
     </message>
 </context>
 </TS>
