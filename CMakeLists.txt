@@ -9,3 +9,6 @@ else(CMAKE_BUILD_TYPE STREQUAL Debug)
     set(BUILD_POSTFIX "")
 endif(CMAKE_BUILD_TYPE STREQUAL Debug)
 add_subdirectory(src)
+
+
+add_custom_target(uninstall COMMAND ${CMAKE_COMMAND} -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX} -P ${CMAKE_CURRENT_SOURCE_DIR}/cmake_uninstall.cmake)
