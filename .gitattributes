@@ -1,0 +1,7 @@
+*.ui binary
+*.ts binary
+*.qm binary
+
+.gitignore export-ignore
+.gitattributes export-ignore
+RELEASE_PROCEDURE.sh export-ignore

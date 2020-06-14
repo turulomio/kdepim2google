@@ -202,22 +202,22 @@
     <message>
         <location filename="../src/kaddressbook2ics.cpp" line="19"/>
         <source>The program creates birthdays from today to 3 years.</source>
-        <translation type="unfinished">El programa crea cumpleaños desde hoy hasta 3 años.</translation>
+        <translation>El programa crea cumpleaños desde hoy hasta 3 años.</translation>
     </message>
     <message>
         <location filename="../src/kaddressbook2ics.cpp" line="20"/>
         <source>You can add the string &apos;Hide birthday&apos; to the contact in order to exclude the birthday from the generated file</source>
-        <translation type="unfinished">Puedes añadir el texto &apos;Ocultar cumpleaños&apos; al contacto para excluir el cumpleaños del fichero generado</translation>
+        <translation>Puedes añadir el texto &apos;Ocultar cumpleaños&apos; al contacto para excluir el cumpleaños del fichero generado</translation>
     </message>
     <message>
         <location filename="../src/kaddressbook2ics.cpp" line="25"/>
         <source>Contacts directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Directorio de contactos.</translation>
     </message>
     <message>
         <location filename="../src/kaddressbook2ics.cpp" line="35"/>
         <source>Path not especified. Using default: %1</source>
-        <translation type="unfinished">Directorio no especificado. Usando directorio por defecto: %1</translation>
+        <translation>Directorio no especificado. Usando directorio por defecto: %1</translation>
     </message>
 </context>
 </TS>
