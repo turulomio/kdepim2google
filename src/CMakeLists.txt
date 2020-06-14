@@ -1,6 +1,7 @@
 set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR})
 set (VERSION "0.6.0")
-add_definitions(-DMYINSTALL_PREFIX=${CMAKE_INSTALL_PREFIX})
+set (LIBDIR "lib")
+add_definit1ions(-DMYINSTALL_PREFIX=${CMAKE_INSTALL_PREFIX})
 add_definitions(-DVERSION="${VERSION}")
 
 # Qt5 package
@@ -44,6 +45,6 @@ set_target_properties(kaddressbook2ics PROPERTIES OUTPUT_NAME kaddressbook2ics${
 
 # Create installation
 INSTALL(TARGETS kaddressbook2cvs kaddressbook2ics DESTINATION bin)
-INSTALL(TARGETS kdepim2google LIBRARY DESTINATION lib)
+INSTALL(TARGETS kdepim2google LIBRARY DESTINATION ${LIBDIR})
 INSTALL(FILES ${HEADERS_LIBRARY} DESTINATION include/kdepim2google)
 INSTALL(FILES ${QM_FILES} DESTINATION share/kdepim2google)
