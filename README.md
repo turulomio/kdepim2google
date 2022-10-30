@@ -1,5 +1,7 @@
 # kdepim2google
 
+This project has been archived due to it's idea is obsolete. Try [Vipcontacts](https://github.com/turulomio/moneymoney) instead.
+
 ## Dependencies
 
 You need QtCore from qt libraries
